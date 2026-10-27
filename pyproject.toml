@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skypoints"
+version = "1.0.0"
+description = "SkyPoints Airline Loyalty Data Processing Engine"
+authors = [{ name = "Sirajuddin Kamaluddin", email = "siraj.kamaluddin@gmail.com" }]
+dependencies = [
+    "duckdb>=0.10.0",
+    "pandas>=2.0.0",
+    "openpyxl>=3.1.0",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-v --strict-markers"
